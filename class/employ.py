@@ -13,7 +13,7 @@ class Department():
     if not self.employees:
       print(f"No employeees in {self.name}")
     for employee in self.employees:
-      print(f"{employee.fname[0]}. {employee.lname[0:2]} - Salary: {employee.sal}")
+      print(f"{employee.fname[0]}. {employee.lname[0:3]} - Salary: {employee.sal}")
 
   # _str_
   def __str__(self):
