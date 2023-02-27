@@ -13,8 +13,8 @@ class Department():
     if not self.employees:
       print(f"No employeees in {self.name}")
     for employee in self.employees:
-      if employee.sal >= 2000000: return print(f" Can't make it more than This salary ${employee.sal}")
-      elif  employee.sal <= 100000: return print(f"{employee.fname[0]}. {employee.lname[0:3]} - Salary: {employee.sal + 6000}")
+      if employee.sal >= 200000: return print(f"{employee.fname[0]}. {employee.lname[0:3]} Can't make it more than This salary ${employee.sal}")
+      elif  employee.sal <= 100000: return print(f"{employee.fname[0]}. {employee.lname[0:3]} - Salary: {employee.sal + 60000}")
       else: return print(f"something went wrong salary: {employee.fname[0]}. {employee.lname[0:3]} - Salary: {employee.sal}")
       # print(f"{employee.fname[0]}. {employee.lname[0:3]} - Salary: {employee.sal}")
 
@@ -57,7 +57,7 @@ department_4 = Department("Legal")
 departments = [department_1, department_2, department_3, department_4]
 
 # create an instance of employ
-new_employee = Employ("James", "Douglas", 200000000, department_2)
+new_employee = Employ("James", "Douglas", 92000, department_2)
 new_employee1 = Employ("Bob", "Squal", 32000, department_1)
 new_employee2 = Employ("Squick", "Scream", 89000, department_3)
 new_employee = Employ("R", "Douglas", 81000, department_1)
