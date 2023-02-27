@@ -1,6 +1,6 @@
 # Node class
 class Node:
-  def __init__(self, val):
+  def __init__(self,val):
     self.val = val
     self.next = None
 
@@ -15,7 +15,7 @@ class SinglyLinkedList:
   def push(self, val):
     newnod = Node(val)
     
-    if not self.head:
+    if self.head is None:
       self.head = newnod
       self.tail = self.head
     else:
@@ -23,10 +23,10 @@ class SinglyLinkedList:
       self.tail = newnod
 
     self.length += 1
-    return 
+    return self
 
   def pop(self):
-    if not self.head: return None
+    if self.head is None: return None
 
     current = self.head
     newtail = current
@@ -47,6 +47,34 @@ class SinglyLinkedList:
     return current
     
 
+  def shift(self):
+    if self.head is None: return None
+
+    currenthead = self.head
+
+    self.head = currenthead.next
+
+    if self.length == 0: self.tail = None
+
+    self.length -= 1
+    return currenthead
+
+  
+  def unshift(self, val):
+     newnode = Node(val)
+
+     if self.head is None: 
+        self.head = newnode
+        self.tail = self.head
+     else:
+        newnode.next = self.head
+        self.head = newnode
+     
+     self.length += 1
+     return self
+
+
+
 
   
   def printlist(self):
@@ -59,14 +87,27 @@ class SinglyLinkedList:
 
 singly = SinglyLinkedList()
 
-singly.push(10)
+# push
+singly.push(40)
 singly.push(20)
 singly.push(30)
 
-
+# pop method remove from the last
 singly.pop()
 
+
+# shift method remove from the first
+singly.shift()
+
+
+# unshift
+singly.unshift(30)
+singly.unshift(300)
+
+
+
 singly.printlist()
+
 
   
 
