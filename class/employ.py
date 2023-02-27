@@ -21,6 +21,7 @@ class Department():
           return f"{self.name} ({len(self.employees)}) employee"
       else:
           return f"{self.name} ({len(self.employees)}) employees"
+  
 
 
 class Employ():
@@ -61,9 +62,10 @@ new_employee = Employ("R", "Douglas", 81000, department_1)
 # storing it inside of list
 employees_list = [new_employee, new_employee1, new_employee2]
 
+
 # Printing  employee
-# for employees in employees_list:  
-#   print(f"Full Name {employees.full_name()} : Salary ${employees.rise_salary()}")
+for employees in employees_list:  
+  print(f"Full Name {employees.full_name()} : Salary ${employees.rise_salary()}")
 
 
 # Printing Department
