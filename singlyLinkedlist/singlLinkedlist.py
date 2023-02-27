@@ -75,15 +75,32 @@ class SinglyLinkedList:
      self.length += 1
      return self
 
-
+  
 
   # print list method show me in details
   def printlist(self):
+    arr = []
     currentnode = self.head
     while currentnode is not None:
-       print (currentnode.val, "->")
+       arr.append(currentnode.val)
        currentnode = currentnode.next
-    print("None")
+    return arr
+  
+  # sort method should sort array
+  def sort(self):
+   arr = []
+   currentnode = self.head
+   while currentnode is not None:
+      arr.append(currentnode.val)
+      currentnode = currentnode.next
+  
+   n = len(arr)
+   for i in range(n):
+       for j in range(0, n-i-1):
+          if arr[j] > arr[j+1] :
+              arr[j], arr[j+1] = arr[j+1], arr[j]      
+   return arr
+
 
 
 singly = SinglyLinkedList()
@@ -92,6 +109,8 @@ singly = SinglyLinkedList()
 singly.push(40)
 singly.push(20)
 singly.push(30)
+singly.push(-1)
+singly.push(-2)
 
 # pop method remove from the last
 singly.pop()
@@ -102,12 +121,15 @@ singly.shift()
 
 
 # unshift
-singly.unshift(30)
+singly.unshift(50)
 singly.unshift(300)
+
+# sort 
+print(singly.sort())
 
 
 # print method for me
-singly.printlist()
+print(singly.printlist())
 
 
   
