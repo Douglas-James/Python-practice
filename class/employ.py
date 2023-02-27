@@ -38,12 +38,9 @@ class Employ():
       return  f"{self.fname} {self.lname}"
   
   def rise_salary(self):
-      if(self.sal > 20000000):
-        return  f" Can't make it more than This salary ${self.sal}"
-      elif (self.sal < 400000):
-          return  self.sal * 1.5
-      else:
-          return f"something went wrong salary: ${self.sal}"
+      if self.sal > 20000000: return  f" Can't make it more than This salary ${self.sal}"
+      elif self.sal < 400000:return  self.sal * 1.5
+      else: return f"something went wrong salary: ${self.sal}"
 
 
 
@@ -56,11 +53,10 @@ department_4 = Department("Legal")
 departments = [department_1, department_2, department_3, department_4]
 
 # create an instance of employ
-new_employee = Employ("James", "Douglas", 1233300, department_2)
+new_employee = Employ("James", "Douglas", 200000, department_2)
 new_employee1 = Employ("Bob", "Squal", 32000, department_1)
-new_employee2 = Employ("Squick", "Scream", 13, department_3)
+new_employee2 = Employ("Squick", "Scream", 89000, department_3)
 new_employee = Employ("R", "Douglas", 81000, department_1)
-
 
 # storing it inside of list
 employees_list = [new_employee, new_employee1, new_employee2]
