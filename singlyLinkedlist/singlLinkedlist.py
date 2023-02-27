@@ -11,7 +11,8 @@ class SinglyLinkedList:
     self.head = None
     self.tail = None
     self.length = 0
-
+ 
+ # push method would add value to by order
   def push(self, val):
     newnod = Node(val)
     
@@ -25,6 +26,7 @@ class SinglyLinkedList:
     self.length += 1
     return self
 
+  # pop method here should remove the last value add
   def pop(self):
     if self.head is None: return None
 
@@ -46,7 +48,7 @@ class SinglyLinkedList:
     
     return current
     
-
+  # shift method here need to remove the first value add
   def shift(self):
     if self.head is None: return None
 
@@ -59,7 +61,7 @@ class SinglyLinkedList:
     self.length -= 1
     return currenthead
 
-  
+  # unshift method should add the first value add
   def unshift(self, val):
      newnode = Node(val)
 
@@ -75,8 +77,7 @@ class SinglyLinkedList:
 
 
 
-
-  
+  # print list method show me in details
   def printlist(self):
     currentnode = self.head
     while currentnode is not None:
@@ -105,7 +106,7 @@ singly.unshift(30)
 singly.unshift(300)
 
 
-
+# print method for me
 singly.printlist()
 
 
